@@ -26,7 +26,13 @@ define(function() {
     },
 
     removeWithoutCopy : function(arr, item) {
-       return arr;
+       var i = arr.length;
+	   while( i-- )
+	   {
+		  if(arr[i] === item ) 
+			arr.splice(i,1);
+	   }
+     	return arr;
     },
 
     append : function(arr, item) {

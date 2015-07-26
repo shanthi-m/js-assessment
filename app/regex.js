@@ -26,8 +26,13 @@ define(function() {
     },
 
     captureThreeNumbers : function(str) {
-
-    },
+     	 var numArr = str.match(/^\d+|\d+\b|\d+(?=\w)/g); //returns array of all numbers [12 12 123]
+    	
+     	 if(numArr !== null && numArr[0].length > 2)
+    		 return numArr[0].substring(0,3);
+    	 else
+    		 return false;
+     },
 
     matchesPattern : function(str) {
        var pattern = /^(\d{3}\-){2}\d{4}$/;
@@ -38,7 +43,10 @@ define(function() {
      },
     
     isUSD : function(str) {
-
+        var pattern = /^\$\d+(,\d{3})*(\.[0-9]{2})?$/;
+        if(str.match(pattern))
+        	return true;
+        return false;
     }
   };
 });
