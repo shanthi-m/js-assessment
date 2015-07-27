@@ -8,7 +8,7 @@ define(function() {
     			greeting: str1,
     			name: str2,
     			sayIt: function () {
-    				return mymodule.greeting + ", " + mymodule.name;
+    				return this.greeting + ", " + this.name;
     		    }
     		  };
     	})();

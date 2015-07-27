@@ -22,7 +22,7 @@ define([
         console = {};
       }
 
-      console.log = function (val) {
+      console.log = function (val) {    	 
         nums.push(val);
       };
     });
